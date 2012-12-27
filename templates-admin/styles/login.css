@@ -1,0 +1,52 @@
+.login {
+	background:#282d33 url(images/bg_dark.png);
+}
+
+#loginwrapper {
+	width:400px;
+	left:50%;
+	margin-left:-200px;
+	float:left;
+	position:relative;
+	height:200px;
+	top:50%;
+	margin-top:-150px;
+}
+
+#logo {
+	width:100% !important;
+}
+
+#wrap_login_name, ul.Inputfields #wrap_login_pass {
+	width:200px !important;
+}
+
+#login_name, ul.Inputfields #login_pass {
+	width:100% !important;
+}
+
+form + p + div {
+	display:none;
+}
+
+.InputfieldSubmit {
+	margin: -2px !important;
+	border: 0px !important;
+}
+
+#Inputfield_submit {
+	width: 100%;
+	height: 36px;
+	margin-top: -10px;
+}
+
+
+.Inputfields > .InputfieldText > .ui-widget-content {
+	padding-bottom: 30px !important;
+}
+
+#notices {
+	margin-left: -1px;
+	border-right: 1px solid #282d33;
+	box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
+}

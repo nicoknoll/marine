@@ -1,0 +1,507 @@
+@import url(reset.css); 
+@import url(JqueryUI/JqueryUI.css);
+
+	* {
+		margin:0 auto;
+	}
+	
+	html, body {
+		height:100%;
+		font-family:'Open Sans', arial, sans-serif;
+	}
+	
+	#wrapper {
+		width:100%;
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
+		height:100%;
+		padding-left:200px;
+		padding-bottom:32px;
+	}
+	
+	nav {
+		width:200px;
+		float:left;
+		position:relative;
+		height:100%;
+		background:#282d33 url(images/bg_dark.png);
+		margin-left:-200px;
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
+	}
+	
+	#logo {
+		position: relative; 
+		width: 200px;
+		height: 60px; 
+		background: url(images/logo.png) center center no-repeat; 
+		color:transparent;
+		border:0px;
+		display:block;
+	}
+	
+	#logo:hover {
+		background: url(images/logo_hover.png) center center no-repeat; 
+	}
+	
+	
+	nav ul {
+		width:100%;
+		float:left;
+		padding:0px;
+		list-style-type:none;
+	}
+	
+	nav ul li {
+		width:100%;
+		float:left;
+	}
+	
+	nav ul li a {
+		width:100%;
+		float:left;
+		color:#adb9b9;
+		text-shadow:0px 1px 2px rgba(0,0,0,0.4);
+		height:48px;
+		line-height:48px;
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
+		padding:0px 20px;
+	}
+	
+	nav ul li a.on {
+		box-shadow:inset 0px 0px 4px rgba(0,0,0,0.5);
+		background:rgba(0,0,0,0.3);
+		color:#fff;
+	}
+	
+	nav ul li a:hover {
+		color:#fff;
+	}
+	
+	nav #user {
+		position:absolute;
+		bottom:0px;
+		height:90px;
+		width:200px;
+		background:rgba(0,0,0,0.2);
+		border-top:1px solid #000;
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
+		padding:20px;
+	}
+	
+	nav #user .avatar {
+		border-radius:50%;
+		box-shadow:inset 0px 0px 5px rgba(0,0,0,0.4);
+		width:44px;
+		height:44px;
+		background:#ccc;
+		float:left;
+		margin-right:15px;
+		background:url(https://de.gravatar.com/userimage/7827382/b1a87218f2b60469218b5897844d0e4c.jpeg);
+		background-size:cover;
+	}
+	
+	
+	
+	nav #user a.title {
+		float:left;
+		width:100px;
+		color:#fff;
+		font-size:16px;
+		margin-top:2px;
+		text-shadow:0px 1px 2px rgba(0,0,0,0.4);
+	}
+	
+	nav #user a.action {
+		float:left;
+		width:100px;
+		font-size:14px;
+		text-shadow:0px 1px 2px rgba(0,0,0,0.4);
+	}
+	
+	
+	#main {
+		width:100%;
+		position:relative;
+		height:100%;
+		background:#dbdbdb url(images/bg_main.png);	
+		box-shadow:0px 0px 7px rgba(0,0,0,0.6);
+		z-index:10;
+		float:left;
+		padding:20px;
+		overflow:auto;
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;	
+	}
+	
+	
+/* ---- Breadcrumb ---- */
+	
+	#breadcrumb {
+		width:100%;
+		position:absolute;
+		background:#ededed url(images/bg_light.png);	
+		box-shadow:0px 0px 4px rgba(0,0,0,0.5);
+		z-index:20;
+		float:left;
+		height:32px;
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
+		padding:0px;
+		float:left;
+		width:100%;
+		bottom:0px;
+	}
+	
+	#breadcrumb li {
+		padding:0px;
+		float:left;
+		height:32px;
+	}
+	
+	#breadcrumb li a {
+		float: left;
+		background: url(images/breadcrumb.png) no-repeat center right;
+		height: 20px;
+		float: left;
+		padding: 6px 25px 6px 15px;
+		font-size: 12px;
+		line-height: 20px;
+		color: #2F4248;
+		font-size:12px;
+	}
+	
+	#breadcrumb li a.on {
+		background: none;
+		font-weight: bold;
+	}
+	
+	#breadcrumb li a:hover {
+		text-decoration:underline;
+		color:#000;
+	}
+	
+	
+
+	
+	
+	
+	.InputfieldForm {
+		width:100%;
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
+		float:left;
+	}
+	
+	.WireTabs {
+		width:100%;
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
+		background:#fff;
+		padding:10px;
+		left:0px !important;
+		box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+	}
+	
+	.WireTabs a {
+		color: #407485;
+		font-weight: bold;
+		font-size:12px;
+	}
+	
+	.WireTabs a:hover {
+		color: #2F4248;
+	}
+	
+	.WireTabs li:first-child {
+		padding-left:5px;
+	}
+
+	
+
+
+	#fieldgroupContext {
+		right: 40px !important;
+		top: 30px !important;
+	}
+	
+	#fieldgroupContextSelect {
+		margin-left:10px;
+	}
+
+
+	.description {
+		color: #2F4248;
+		font-size:13px;
+	}
+
+	p.description,
+	.PageListID7 .detail {
+		font-style: italic;
+		color: #777; 
+		margin-bottom:15px;
+	}
+	
+	
+
+
+
+
+
+	h2 {
+		margin:10px 10px;
+		font-size: 22px;
+		color: #2F4248;
+		text-shadow:0px 1px 2px rgba(0,0,0,0.1);
+		float: left;
+		font-weight: 500;
+		margin-top: 30px;
+		width: 100%;
+	}
+	
+	table.AdminDataList + h2 {
+		margin-top:0px;
+	}
+
+
+	.AdminDataTable,
+	.AdminDataList,
+	.AdminDataTableSortable {
+		width:100%;
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
+		background:rgba(255,255,255,1);
+		padding:10px;
+		left:0px;
+		box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+		float: left;
+		padding:12px 15px;
+		border-top: 1px solid #EEE;
+		margin-bottom: 20px;
+	}
+	
+	.AdminDataTable tr td,
+	.AdminDataList tr td,
+	.AdminDataTableSortable tr td,
+	.AdminDataTable tr th,
+	.AdminDataList tr th,
+	.AdminDataTableSortable tr th {
+		padding:10px !important;
+		font-size:13px !important;
+	}
+	
+	#PageListContainer,
+	.Inputfields .Inputfield:not(.InputfieldSubmit):not(.InputfieldWrapper):not(.InputfieldButton),
+	.InputfieldFile {
+		width:100%;
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
+		background:rgba(255,255,255,1);
+		left:0px;
+		box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+		float: left;
+		border-top: 1px solid #EEE;
+	}
+	
+	
+	#PageListContainer {
+		font-size:14px;
+		padding:10px 20px 20px;	
+	}
+
+	.Inputfield .ui-widget-header,
+	.Inputfield .ui-widget-content {
+		border:0px;
+		background:transparent;
+		float: left;
+		width:100%;
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
+		font-size: 13px;
+	}
+	
+	.Inputfield .ui-widget-header {
+		padding:10px 12px !important;
+
+	}
+	
+	.Inputfield .ui-widget-content {
+		padding-top:0px !important;
+	}
+	
+	
+	ul.Inputfields li input[type="text"], 
+	ul.Inputfields li input[type="number"], 
+	ul.Inputfields li input[type="password"], 
+	ul.Inputfields li input[type="email"],
+	textarea {
+		float: left;
+		width: 100%;
+		padding: 5px;
+		border: 1px solid #DDD;
+		border-top: 1px solid #BBB;
+		box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
+		max-width: 100%;
+	}
+	
+	.Inputfield, .Inputfields {
+		float:left;
+		width:100%;
+	}
+	
+	
+	.InputfieldCheckboxesStacked li, .InputfieldRadiosStacked li {
+		padding:5px 5px 0px 5px;
+	}
+	
+	.InputfieldCheckboxesStacked li input, .InputfieldRadiosStacked li input {
+		margin-right:5px;
+	}
+	
+	
+	.InputfieldFileList {
+	float:left;
+	width:100%;	
+	position:relative;
+	}
+	
+	.InputfieldFileUpload {
+		float:left;
+		width:100%;	
+	}
+	
+	.ui-sortable-helper {
+		background:#f6f6f6;
+	}
+	
+	/* ---- more ---- */
+	
+	#modules_form .description {
+		width:100%;
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
+		background:rgba(255,255,255,1);
+		padding:10px;
+		left:0px;
+		box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+		float: left;
+		padding:12px 15px;
+	}
+
+
+	.footer {
+		position:absolute;
+		right:10px;
+		bottom:0px;
+		color: #999;
+		font-size:12px;
+		z-index:30;
+		line-height:32px;
+	}
+
+	.notes, .InputfieldFileValidExtensions {
+		background:#e4eff2;
+		padding:10px 12px;
+		margin-top:15px;
+		color: #2F4248;
+		float:left;
+		width:100%;
+		margin:15px -12px 0px;
+	}
+	
+	#notices {
+		font-size: 13px;
+		float: left;
+		width: 100%;
+		background: #fff;
+		box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+	}
+	
+	#notices .NoticeMessage {
+		padding: 5px;
+	}
+	
+	#notices .NoticeMessage:first-child {
+		margin-top: 10px;
+	}
+	
+	#notices .NoticeMessage:last-child {
+		margin-bottom: 10px;
+	}
+	
+	#notices .ui-icon {
+		top:0px !important;
+	}
+
+	#main dl.nav {
+		width:100%;
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
+		background:rgba(255,255,255,1);
+		left:0px;
+		box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+		float: left;
+		padding:15px;
+	}
+	
+	#main dl.nav dt {
+
+		font-size: 18px;
+	}
+
+	#main dl.nav dd {
+		font-size: 14px;
+		margin-bottom:15px;
+		color:#777;
+		padding-bottom:15px;
+		border-bottom:1px solid #eee;
+	}
+	
+	#main dl.nav dd:last-child {
+		margin-bottom:0px;
+		border-bottom:0px;
+		padding-bottom:0px;
+	}
+
+
+.PageListItem {
+border-bottom: 1px solid #EEE;
+padding: 12px 2px 10px 24px !important;
+background:url(images/page_white.png) center left no-repeat;
+}
+
+.PageListID1 {
+	background-image:url(images/house.png);
+}
+
+.PageListID7 {
+	background-image:url(images/bin.png);
+}
+
+
+	a {
+		color:#407485;
+	}
+	
+	a:hover {
+		color: #2F4248;
+	}
+	
+	table + p {
+		width:100%;float:left;
+	}
+	
+	
+/* ---- Special ---- */
+
+.InputfieldPageNameURL {
+	margin-bottom:10px;
+	float:left;
+	width:100%;
+}
+
+#columnWidthSlider {
+width: 100% !important;
+}
+
+.PageListActions li {
+border-left: 1px solid #ddd !important;
+}
+
+.PageListActions li a {
+padding: 1px 8px 1px 8px !important;
+}
+
+.PageList .PageListNumChildren {
+	margin-right:8px;
+}
