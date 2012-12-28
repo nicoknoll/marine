@@ -17,7 +17,26 @@
 		padding-left:200px;
 		padding-bottom:32px;
 	}
+
+	body.modal #wrapper {
+		padding-left: 0px;
+		padding-bottom: 0px;
+	}
 	
+	.ui-dialog-titlebar {
+		background:#bbb;
+		border-color: #aaa;	
+	}
+
+	.ui-dialog-buttonpane {
+		border:none;
+	}
+
+	.asmListSortable li.ui-state-hover a,
+	.asmListItemLabel .ui-state-hover a, .ui-state-hover a:hover {
+		color:#333 ;
+	}
+
 	nav {
 		width:200px;
 		float:left;

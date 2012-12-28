@@ -60,6 +60,8 @@ if(!$user->isLoggedin()) {
 
 
 	<div id="wrapper">
+
+		<?php if($bodyClass != "modal"){?>
 		<nav>
 			<a id="logo" href="http://processwire.com/">ProcessWire</a>
 			<ul id="sidenav" class="nav">
@@ -82,6 +84,7 @@ if(!$user->isLoggedin()) {
 			
 			
 		</nav>
+		<?php } ?>
 		<div id="main">
 
 			<?php if(count($notices)) include($config->paths->adminTemplates . "notices.inc"); ?>
@@ -103,25 +106,27 @@ if(!$user->isLoggedin()) {
 	
 	
 	<!-- Breadcrumb -->
-	
-	<?php if(!$user->isGuest()): ?>
-		
-		<ul id="breadcrumb" class="nav"><?php
-			foreach($this->fuel('breadcrumbs') as $breadcrumb) {
-				$title = __($breadcrumb->title, __FILE__); 
-				echo "\n\t\t\t\t<li><a href='{$breadcrumb->url}'>{$title}</a></li>";
-			}
+	<?php if($bodyClass != "modal"){?>
+		<?php if(!$user->isGuest()): ?>
 			
-			$on = __(strip_tags($this->fuel->processHeadline ? $this->fuel->processHeadline : $page->get("title|name")), __FILE__);
+			<ul id="breadcrumb" class="nav"><?php
+				foreach($this->fuel('breadcrumbs') as $breadcrumb) {
+					$title = __($breadcrumb->title, __FILE__); 
+					echo "\n\t\t\t\t<li><a href='{$breadcrumb->url}'>{$title}</a></li>";
+				}
+				
+				$on = __(strip_tags($this->fuel->processHeadline ? $this->fuel->processHeadline : $page->get("title|name")), __FILE__);
+				
+				echo '<li><a class="on" href="'.$page->url.'../?open='.$input->get->id.'">'.$on.'</a></li>';
+				?>
 			
-			echo '<li><a class="on" href="'.$page->url.'../?open='.$input->get->id.'">'.$on.'</a></li>';
-			?>
+			</ul>
 		
-		</ul>
-	
-	<?php endif; ?>	
+		<?php endif; ?>	
 
-	<div id="footer" class="footer">ProcessWire <?php echo $config->version . ' <!--v' . $config->systemVersion; ?>--> &copy; <?php echo date("Y"); ?> Ryan Cramer</div>
+		<div id="footer" class="footer">ProcessWire <?php echo $config->version . ' <!--v' . $config->systemVersion; ?>--> &copy; <?php echo date("Y"); ?> Ryan Cramer</div>
+
+	<?php } ?>
 
 </body>
 </html>
