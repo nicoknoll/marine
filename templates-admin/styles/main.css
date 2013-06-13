@@ -14,8 +14,7 @@
 		width:100%;
 		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
 		height:100%;
-		padding-left:200px;
-		padding-bottom:32px;
+		padding-left:200px;		
 	}
 
 	body.modal #wrapper {
@@ -146,6 +145,7 @@
 		z-index:10;
 		float:left;
 		padding:20px;
+		margin-top:32px;
 		overflow:auto;
 		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;	
 	}

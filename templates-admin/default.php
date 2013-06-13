@@ -84,27 +84,6 @@ if(!$user->isLoggedin()) {
 			
 			
 		</nav>
-		<?php } ?>
-		<div id="main">
-
-			<?php if(count($notices)) include($config->paths->adminTemplates . "notices.inc"); ?>
-			
-			
-	
-			<?php if(trim($page->summary)) echo "<h2>{$page->summary}</h2>"; ?>
-			
-			<?php if($page->body) echo $page->body; ?>
-			
-			<?php echo $content?>
-		</div>
-		
-		
-		<?php if($config->debug && $this->user->isSuperuser()) include($config->paths->adminTemplates . "debug.inc"); ?>
-		
-		
-	</div>
-	
-	
 	<!-- Breadcrumb -->
 	<?php if($bodyClass != "modal"){?>
 		<?php if(!$user->isGuest()): ?>
@@ -127,6 +106,29 @@ if(!$user->isLoggedin()) {
 		<div id="footer" class="footer">ProcessWire <?php echo $config->version . ' <!--v' . $config->systemVersion; ?>--> &copy; <?php echo date("Y"); ?> Ryan Cramer</div>
 
 	<?php } ?>
+	
+		<?php } ?>
+		<div id="main">
+
+			<?php if(count($notices)) include($config->paths->adminTemplates . "notices.inc"); ?>
+			
+			
+	
+			<?php if(trim($page->summary)) echo "<h2>{$page->summary}</h2>"; ?>
+			
+			<?php if($page->body) echo $page->body; ?>
+			
+			<?php echo $content?>
+		</div>
+		
+		
+		<?php if($config->debug && $this->user->isSuperuser()) include($config->paths->adminTemplates . "debug.inc"); ?>
+		
+		
+	</div>
+	
+	
+
 
 </body>
 </html>
