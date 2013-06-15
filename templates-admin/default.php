@@ -85,6 +85,7 @@ if(!$user->isLoggedin()) {
 			
 		</nav>
 	<!-- Breadcrumb -->
+	<div id="bcwrapper">
 	<?php if($bodyClass != "modal"){?>
 		<?php if(!$user->isGuest()): ?>
 			
@@ -100,9 +101,9 @@ if(!$user->isLoggedin()) {
 				?>
 			
 			</ul>
-		
+	</div>
 		<?php endif; ?>	
-
+	
 		<div id="footer" class="footer">ProcessWire <?php echo $config->version . ' <!--v' . $config->systemVersion; ?>--> &copy; <?php echo date("Y"); ?> Ryan Cramer</div>
 
 	<?php } ?>
