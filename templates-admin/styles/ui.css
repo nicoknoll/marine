@@ -158,6 +158,7 @@ p span.ui-state-error {
 	 *
 	 */
 	.PageList .PageListStatusHidden a.PageListPage {
-		color: #6c858d; 
+		color: #B9BCBE;        	
+        	font-style: italic;
 	}
 
