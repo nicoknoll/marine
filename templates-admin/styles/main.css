@@ -144,14 +144,17 @@
 		box-shadow:0px 0px 7px rgba(0,0,0,0.6);
 		z-index:10;
 		float:left;
-		padding:20px;
-		margin-top:32px;
+		padding:60px 20px 20px;
 		overflow:auto;
 		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;	
 	}
 	
 	
 /* ---- Breadcrumb ---- */
+	
+	#bcwrapper {
+	    position:relative
+	}
 	
 	#breadcrumb {
 		width:100%;
@@ -165,7 +168,7 @@
 		padding:0px;
 		float:left;
 		width:100%;
-		bottom:0px;
+		top:0px;
 	}
 	
 	#breadcrumb li {
